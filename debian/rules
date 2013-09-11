@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+DEB_CONFIGURE_EXTRA_FLAGS += --enable-dbus-type=session
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+# This has to be exported to make some magic below work.
+export DH_OPTIONS
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
+	./autogen.sh --enable-dbus-type=session --enable-gtk-doc --enable-introspection=yes
+	dh_auto_configure -- --enable-dbus-type=session --enable-gtk-doc --enable-introspection=yes
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz
+
+.PHONY: override_dh_auto_test
+override_dh_auto_test:
+	true
+
+.PHONY: override_dh_strip
+override_dh_strip:
+	dh_strip --dbg-package=libgsignon-glib-dbg
+

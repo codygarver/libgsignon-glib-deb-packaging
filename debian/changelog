@@ -1,0 +1,11 @@
+libgsignon-glib (2.0.1-2) unstable; urgency=low
+
+  * Produce a separate debug symbols package
+
+ -- Jussi Laako <jussi.laako@linux.intel.com>  Wed, 10 Jul 2013 15:08:00 +0300
+
+libgsignon-glib (2.0.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Jussi Laako <jussi.laako@linux.intel.com>  Thu, 04 Jul 2013 15:28:50 +0300
