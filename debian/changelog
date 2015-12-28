@@ -1,3 +1,23 @@
+libgsignon-glib (2.4.0-1) unstable; urgency=low
+
+  * Corrected and updated widl file along with web SSO API extension
+  * Fix typo in reading identity type from variant and updated tests
+  * Fixed issues found by coverity
+
+ -- Imran Zaman <imran.zaman@intel.com>  Thu, 12 Feb 2015 16:46:00 +0300
+
+libgsignon-glib (2.3.0-1) unstable; urgency=low
+
+  * Release 2.3.0 with implementation of reference APIs
+
+ -- Imran Zaman <imran.zaman@intel.com>  Tue, 01 Jul 2014 16:46:00 +0300
+
+libgsignon-glib (2.1.0-5) unstable; urgency=low
+
+  * Include gsso-example in dev package
+
+ -- Jussi Laako <jussi.laako@linux.intel.com>  Thu, 03 Apr 2014 16:46:00 +0300
+
 libgsignon-glib (2.1.0-4) unstable; urgency=low
 
   * Release 2.1.0
@@ -21,3 +41,5 @@ libgsignon-glib (2.0.1-1) unstable; urgency=low
   * Initial Release.
 
  -- Jussi Laako <jussi.laako@linux.intel.com>  Thu, 04 Jul 2013 15:28:50 +0300
+
+
