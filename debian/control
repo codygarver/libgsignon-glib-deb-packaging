@@ -9,7 +9,8 @@ Build-Depends: autotools-dev,
                libdbus-1-dev,
                libgirepository1.0-dev (>= 1.30.0),
                libglib2.0-dev (>= 2.34),
-               pkg-config
+               pkg-config,
+               valac
 Standards-Version: 3.9.5
 Homepage: https://01.org/gsso
 Vcs-Git: https://gitlab.com/accounts-sso/libgsignon-glib.git
