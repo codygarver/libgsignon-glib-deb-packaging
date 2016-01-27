@@ -6,56 +6,66 @@ Build-Depends: autotools-dev,
                debhelper (>= 9),
                gobject-introspection (>= 1.30.0),
                gtk-doc-tools,
+               libdbus-1-dev,
                libgirepository1.0-dev (>= 1.30.0),
                libglib2.0-dev (>= 2.34),
                pkg-config
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: https://01.org/gsso
-Vcs-Git: http://code.google.com/p/accounts-sso.libgsignon-glib/
-Vcs-Browser: http://code.google.com/p/accounts-sso/source/browse/?repo=libgsignon-glib
+Vcs-Git: https://gitlab.com/accounts-sso/libgsignon-glib.git
+Vcs-Browser: https://gitlab.com/accounts-sso/libgsignon-glib/tree/master
 
 Package: libgsignon-glib1
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: gSSO client library
- gSSO is a single sign-on framework, providing secure storage and single
- sign-on service.
+ gSSO is a single sign-on framework, providing secure storage and single sign-on service.
 
 Package: libgsignon-glib-dev
-Section: libdevel
 Architecture: any
+Section: libdevel
 Depends: gir1.2-gsignon-1.0 (= ${binary:Version}),
          libgsignon-glib1 (= ${binary:Version}),
-         ${misc:Depends}
-Description: development files for libgsignon-glib
- Headers and libraries necessary for developing applications using gSSO.
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: GLib-based Single Sign On framework -- development files
+ gSSO is a single sign-on framework, providing secure storage and single sign-on
+ service.
+ .
+ This package contains the development files for libgsignon-glib.
 
 Package: libgsignon-glib1-dbg
-Section: debug
 Architecture: any
+Section: debug
 Depends: libgsignon-glib1 (= ${binary:Version}), ${misc:Depends}
 Multi-Arch: same
-Description: debug symbols for libgsignon-glib
- Debug symbols necessary for debugging applications using gSSO.
+Description: GLib-based Single Sign On framework -- debugging symbols
+ gSSO is a single sign-on framework, providing secure storage and single sign-on
+ service.
+ .
+ This package contains detached debugging symbols.
+ .
+ Most people will not need this package.
 
 Package: libgsignon-glib-doc
 Section: doc
 Architecture: all
 Depends: ${misc:Depends}
-Recommends: libglib2.0-doc
-Suggests: devhelp
-Description: documentation for libgsignon-glib
- Developer documentation for developing applications using gSSO.
+Description: GLib-based Single Sign On framework -- documentation
+ gSSO is a single sign-on framework, providing secure storage and single sign-on
+ service.
+ .
+ This package contains the documentation files for libgsignon-glib.
 
 Package: gir1.2-gsignon-1.0
 Section: introspection
 Architecture: any
-Depends: ${gir:Depends}, ${misc:Depends}, ${shlibs:Depends}
-Description: GObject introspection data for the libgsignon-glib library
- gSSO is a single sign-on framework, providing secure storage and single
- sign-on service.
+Depends: ${gir:Depends},
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: GLib-based Single Sign On framework -- gir bindings
+ gSSO is a single sign-on framework, providing secure storage and single sign-on
+ service.
  .
- It can be used by packages using the GIRepository format to generate
- dynamic bindings.
+ This package can be used by other packages using the GIRepository format to
+ generate dynamic bindings.

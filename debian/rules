@@ -3,6 +3,9 @@
 
 DEB_CONFIGURE_EXTRA_FLAGS += --enable-dbus-type=session
 
+# Optionally build a debug version
+#DEB_CONFIGURE_EXTRA_FLAGS += --enable-debug
+
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
@@ -16,9 +19,6 @@ override_dh_auto_configure:
 	./autogen.sh --enable-dbus-type=session --enable-gtk-doc --enable-introspection=yes
 	dh_auto_configure -- --enable-dbus-type=session --enable-gtk-doc --enable-introspection=yes
 
-override_dh_builddeb:
-	dh_builddeb -- -Zxz
-
 .PHONY: override_dh_auto_test
 override_dh_auto_test:
 	true
@@ -26,4 +26,3 @@ override_dh_auto_test:
 .PHONY: override_dh_strip
 override_dh_strip:
 	dh_strip --dbg-package=libgsignon-glib1-dbg
-

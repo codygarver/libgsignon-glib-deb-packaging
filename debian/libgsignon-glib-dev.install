@@ -1,4 +1,6 @@
+/usr/bin/gsso-example
 /usr/include/libgsignon-glib/*
 /usr/lib/*/libgsignon-glib.so
 /usr/lib/*/pkgconfig/libgsignon-glib.pc
 /usr/share/gir-1.0/*
+/usr/share/vala/vapi/libgsignon-glib.vapi
