@@ -18,7 +18,9 @@ Vcs-Browser: https://gitlab.com/accounts-sso/libgsignon-glib/tree/master
 
 Package: libgsignon-glib1
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Description: gSSO client library
  gSSO is a single sign-on framework, providing secure storage and single sign-on service.
 
@@ -38,7 +40,8 @@ Description: GLib-based Single Sign On framework -- development files
 Package: libgsignon-glib1-dbg
 Architecture: any
 Section: debug
-Depends: libgsignon-glib1 (= ${binary:Version}), ${misc:Depends}
+Depends: libgsignon-glib1 (= ${binary:Version}),
+         ${misc:Depends}
 Multi-Arch: same
 Description: GLib-based Single Sign On framework -- debugging symbols
  gSSO is a single sign-on framework, providing secure storage and single sign-on
@@ -50,6 +53,7 @@ Description: GLib-based Single Sign On framework -- debugging symbols
 
 Package: libgsignon-glib-doc
 Section: doc
+Suggests: devhelp
 Architecture: all
 Depends: ${misc:Depends}
 Description: GLib-based Single Sign On framework -- documentation
