@@ -4,6 +4,7 @@ Priority: extra
 Maintainer: Jussi Laako <jussi.laako@linux.intel.com>
 Build-Depends: autotools-dev,
                debhelper (>= 9),
+               dh-autoreconf,
                gobject-introspection (>= 1.30.0),
                gtk-doc-tools,
                libdbus-1-dev,
